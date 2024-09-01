@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Outfit;
+}
+body{
+  animation: fadeIn 1s;
+}
+.result::-webkit-scrollbar {
+  display: none;
+}
+.loader{
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #4b90ff,#ff5546,#4b90ff);
+  background-size: 800px 50px;
+  height: 20px;
+  border-radius: 5px;
+  animation: loading 3s linear infinite;
+}
+.recent {
+  animation: fadeIn 1s;
+}
+@keyframes loading {
+  0%{
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+}
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}
